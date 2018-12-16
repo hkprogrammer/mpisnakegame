@@ -54,23 +54,48 @@ function detectmob() {
  else {
     return false;
   }
-}
+}var arrow = document.getElementsByClassName('arrow');
 if(detectmob() == true){
 	document.getElementById('Controls').style.visibility  = "visible";
-	
+	arrow[0].style.width = "200px";
+	arrow[1].style.height = "200px";
+	arrow[2].style.height = "200px";
+	arrow[3].style.height = "200px";
 }	
 else if(detectmob() == false){
 	document.getElementById('Controls').style.visibility  = "hidden";
+	arrow[0].style.width = "0px";
+	arrow[1].style.height = "0px";
+	arrow[2].style.height = "0px";
+	arrow[3].style.height = "0px";
+	
 }
 window.addEventListener("resize", function(){
    	
 	//for weblink only
+	var arrow = document.getElementsByClassName('arrow');
+	
+	
 	if(detectmob() == true){
 		document.getElementById('Controls').style.visibility  = "visible";
+		
+			arrow[0].style.width = "200px";
+			arrow[1].style.height = "200px";
+			arrow[2].style.height = "200px";
+			arrow[3].style.height = "200px";
+			
 		
 	}	
 	else if(detectmob() == false){
 		document.getElementById('Controls').style.visibility  = "hidden";
+		
+			
+			arrow[0].style.width = "0px";
+			arrow[1].style.height = "0px";
+			arrow[2].style.height = "0px";
+			arrow[3].style.height = "0px";
+
+		
 	}
 	
 
