@@ -63,11 +63,10 @@
             left: 1500px;
 
         }
-        #refresh{
-            width: 30px;
-            height: 30px;
-            content:"\e030";
+        #refresh:hover{
+            cursor: pointer
         }
+     
     </style>
 </head>
 <body>
@@ -102,7 +101,7 @@
 
             </div>
             <div class="leaderboard">
-                <h3>Leaderboard<button class="btn btn-sm btn-info" id="refresh" onclick="refresh()"><img src="refresh.svg" width="15px"></button></h3>
+                <h3>Leaderboard&nbsp;<img src="refresh.png" width="15px" onclick="refresh()" id="refresh"></h3>
                 <ol id="leaderboard">
                     
                 </ol>
