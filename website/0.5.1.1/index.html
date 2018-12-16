@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    
+
+    <title>Snake</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   
+    <style>
+        #pos{
+          
+        
+        }
+        #points{
+        
+        color: black;
+        font-weight: bold;
+        z-index:0;
+        font-family: verdana;
+        }
+        #data{
+            height: 100px;
+            width: 1440px;
+            background-color:lightgrey;
+            max-height:100px;
+
+        }
+        html, body {
+          height: 100%;
+        }
+
+        #snakegame {
+          margin: auto;
+          display: flex;
+
+          /* This centers our sketch horizontally. */
+          
+        }
+        #timer{
+            margin-top: 0px;
+            margin-left: 20px;
+        }
+        #time{
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+        <div id="data">
+            <h3>Snake</h3>
+           
+            <div class="row">
+                <div class="col-3">
+
+                    <span id="time">Time:</span>
+                    <br>
+                    <span id="timer">
+                        00:00:00
+                    </span>
+                </div>
+                <div class="col-3">
+                    <span id="point">Point:</span>
+                    <br>
+                    <span id="points">
+                      0
+                    </span>
+                </div>
+                
+                <span id="pos">
+                    Error
+                </span>
+
+            </div>
+        </div>
+        
+        <div id="snakegame">
+            
+
+            <script src="p5.js">
+            </script>
+            <script src="controls.js"></script>
+        </div>
+
+
+
+<script src="timer.js"></script>
+
+</body>
+</html>

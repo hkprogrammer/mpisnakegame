@@ -1,0 +1,87 @@
+body{
+	
+
+
+}
+.well{
+	opacity: 1;
+	border-radius: 17px;
+
+
+}
+#row_jumbo1{
+
+	opacity: 1;
+	border-radius: 17px;
+}
+#sidebar{
+	border:1px;
+	border-style: groove;
+	border-radius: 10px;
+	border-color: lightgrey;
+
+
+}
+#content{
+	border:1px;
+	border-style: groove;
+	border-radius: 15px;
+	border-color: lightgrey;
+}
+#first_meeting{
+	color:#e2743d;
+
+}
+.done{
+	color:#e2743d;
+
+}
+.done:hover{
+	color:#e2743d;
+} 
+#Announcements{
+	text-decoration: underline;
+}
+/*#f46842*/
+.avg{
+			font-weight: bold;
+
+}
+.record{
+
+	color:red;
+}
+.italic{
+	font-style: italic;
+
+}
+.prerelease{
+
+	color:blue;
+}
+.prerelease:hover{
+
+	color:blue;
+}
+.hoverdisabled{
+	cursor: no-drop;
+}
+.hoverdisabled:hover{
+	cursor: no-drop;
+}
+.bold{
+	font-weight: bold;
+}
+.gold td, .gold th{
+
+	background-color: gold;
+
+}
+.silver td, .silver th{
+
+	background-color: silver;
+}
+.bronze td, .bronze th{
+	background-color: #CD7F32;
+}
+.win{background-color:#CCFF00;}

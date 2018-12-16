@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading</title>
+	<script type="text/javascript">
+		function onload(){
+			document.location.replace('index.html');
+			if($(document).width() <= 1100){
+				document.getElementById("loading").style.width = "70%";
+			}
+
+			else if($(document).width() > 1100){
+				document.getElementById("loading").style.width = "30%";
+			}
+
+			
+		}
+		window.addEventListener("resize", function(){
+			if($(document).width() <= 1100){
+				document.getElementById("loading").style.width = "70%";
+			}
+
+			else if($(document).width() > 1100){
+				document.getElementById("loading").style.width = "30%";
+			}
+		});
+
+		
+	</script>
+</head>
+<body onload="onload()">
+
+<center>
+<img src="../images/backgrounds/loading.gif" width="30%" id="loading">
+
+<h2>Loading..</h2>
+</center>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+</html>
