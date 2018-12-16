@@ -79,9 +79,11 @@ function Snake() {
 var blocksize = 20;
 var s = new Snake();
 var f = new fruit();
-var spositionx = [];
-var spositiony = [];
-var len = 3;
+
+//taken off because of unused variable
+// var spositionx = [];
+// var spositiony = [];
+var len = 3; // initial length
 var gameOverScreen = document.getElementById("gameoverC");
 var GOvertxt = document.getElementById("overSpan");
 var GOverbtn = document.getElementById("overbtn");
@@ -104,9 +106,9 @@ function keyselect(){
 
 }
 document.getElementById("invisbtn").focus();
-var highscore;
+
 var data;
-var localData;
+
 
 function setup() {
     
@@ -127,7 +129,7 @@ function setup() {
     GOvertxt.innerHTML = "Start Snake";
     GOverbtn.innerHTML = "Start";
     data = loadJSON('/check', getScore);
-    localData = data;
+   
 }
 function getScore(){
     //setting up variables
@@ -216,13 +218,13 @@ function getScore(){
 }
 
 
-var frameC = 0;
+
 var points = 0;
-var frameA = 0;
+
 function draw() {
 
     frameRate(frames);
-   s.update();
+    s.update();
     if(gameActive){
         var name = document.getElementById('name');
         name.value = "";
@@ -254,45 +256,37 @@ function draw() {
         //0.6.1 11/26/18 Finish
 
         if (s.x >= width){
-            
             s.xspeed = 0;
             s.yspeed = 0;
-            
-            gameOver();
-            console.log("You Died");
-            
+            gameOver();     
         }
         if (s.x <= 0 - 10) {
-            
             s.xspeed = 0;
             s.yspeed = 0;
             gameOver();
         }
         if (s.y >= height) {
-           
             s.xspeed = 0;
             s.yspeed = 0;
             gameOver();
         }
         if (s.y <= 0 - 10) {
-          
             s.xspeed = 0;
             s.yspeed = 0;
             gameOver();
         }
-    
-        spositionx.push(s.x);
-        spositiony.push(s.y);
+        // spositionx.push(s.x);
+        // spositiony.push(s.y);
 
-        if (spositionx.length >= 100) {
+        // if (spositionx.length >= 100) {
 
-            spositionx.shift();
-        }
-        if (spositiony.length >= 100) {
+        //     spositionx.shift();
+        // }
+        // if (spositiony.length >= 100) {
 
-            spositiony.shift();
-        }
-        document.getElementById("pos").innerHTML = ("X: " + spositionx[spositionx.length - 1] + "<br> " + "Y: " + spositiony[spositiony.length - 1] );
+        //     spositiony.shift();
+        // }
+        //document.getElementById("pos").innerHTML = ("X: " + spositionx[spositionx.length - 1] + "<br> " + "Y: " + spositiony[spositiony.length - 1] );
         //console.log(spositionx[spositionx.length-1] + " " + spositiony[spositiony.length - 1]);
 
 
@@ -307,7 +301,6 @@ function draw() {
         if(points < 70){
             if(points > 15 && points < 30){
                 framesA = 2;
-
             }
             else if (points >= 30 && points <= 50){
                 framesA = 4;
@@ -351,19 +344,15 @@ function fcheckhit(){
     var checked;
     var x=0;
     while(checked != true){
-       
+        
         for(var i = 0; i < s.tail.length; i++){
             var pos = s.tail[i];
             var d = dist(f.x,f.y,pos.x,pos.y);
             if(d < 1){
                 f.reposition();
-                checked = false;
-                
+                checked = false; 
                 break;
             }
-            
-              
-
         }
         x++;
         if(x>2){
@@ -377,8 +366,7 @@ function fcheckhit(){
 
 function gameOver(x) {
     gameoverC.style.visibility = "visible";
-
-    document.getElementById("name").focus();
+    $('#name').focus();
     $('.start')[0].focus();
     gameActive = false;
     frameRate(0);
