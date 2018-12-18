@@ -4,6 +4,7 @@
   "description": "Snake game",
   "main": "index.js",
   "scripts": {
+    "dev" : "nodemon index.js",
     "start": "node index.js",
     "test": "run"
   },
