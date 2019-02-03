@@ -125,7 +125,7 @@ function setup() {
     background(51);
     s.death();
     s.update();
-     resetGame();
+    resetGame();
     GOvertxt.innerHTML = "Start Snake";
     GOverbtn.innerHTML = "Start";
     data = loadJSON('/check', getScore);
