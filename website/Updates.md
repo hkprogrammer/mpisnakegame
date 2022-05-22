@@ -303,7 +303,7 @@ Better Settings
 Added:
 
 -Implemented reorder.js(my previous js library)
--Added new elements to the old system(C:\Users\hitokikidahashi\Desktop\Snake Dev\Node System Chart.jpg)
+-Added new elements to the old system(Snake Dev\Node System Chart.jpg)
 -Implemented new 3D system chart.
 
 
